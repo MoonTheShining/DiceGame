@@ -1,0 +1,38 @@
+using System;
+
+namespace PROJECT
+{
+    class Programcopy
+    {
+        static void Main(string[] args)
+        {
+            Random numberGen = new Random();
+            int roll =0;
+            int roll2 =1;
+            int attempts =0;
+
+            Console.WriteLine("Press enter to roll the die");
+
+
+                while(roll != roll2 )
+                {
+
+                    Console.ReadKey();
+                    roll = numberGen.Next(1, 7);
+                    Console.WriteLine("Roll 1: " + roll);
+        
+                    roll2 = numberGen.Next(1, 7);
+                    Console.WriteLine("Roll 2: " + roll2);
+                    attempts++;
+                    Console.WriteLine("");
+                    
+                }
+            Console.WriteLine("It took you:" + attempts + " trys to roll two of a kind");
+  
+            
+
+            Console.ReadKey();
+        } 
+    }
+}
+
